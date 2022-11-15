@@ -6,16 +6,6 @@
 # Based on Panchajanya1999 script.
 #
 
-# Function to show an informational message
-msg() {
-    echo -e "\e[1;32m$*\e[0m"
-}
-
-err() {
-    echo -e "\e[1;41m$*\e[0m"
-    exit 1
-}
-
 # Set function for cloning repository
 clone() {
 	echo " "
