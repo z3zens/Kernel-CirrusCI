@@ -67,7 +67,7 @@ COMMIT_HEAD=$(git log --oneline -1)
 DATE=$(TZ=Asia/Jakarta date +"%Y%m%d-%T")
 
 # Set environment for clang
-TC_DIR=$PWD/clang
+TC_DIR=$KERNEL_DIR/clang
 # Get path and compiler string
 KBUILD_COMPILER_STRING=$("$TC_DIR"/bin/clang --version | head -n 1 | perl -pe 's/\(http.*?\)//gs' | sed -e 's/  */ /g' -e 's/[[:space:]]*$//')
 PATH=$TC_DIR/bin/:$PATH
