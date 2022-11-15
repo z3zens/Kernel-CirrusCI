@@ -1,0 +1,25 @@
+env:
+    # Cirrus Specific Vars (Do *NOT* Change)
+    CIRRUS_SHELL: bash
+
+task:
+  name: "Kernel Build"
+  timeout_in: 60m
+  container:
+      image: panchajanya1999/archlinux:latest
+      cpu: 8
+      memory: 32G
+
+  Install-Dependencies_script:
+      - ln -s /usr/share/zoneinfo/Asia/Jakarta /etc/localtime && date
+      - pacman -Sy --noconfirm git bc inetutils python3 flex bison libc++ libxml2 python-pip zip wget cpio jdk-openjdk tzdata && python3 -m pip install networkx && pip3 install --upgrade gupload
+      
+  Clone-Sources_script:
+      - bash -c "$(curl -sL https://raw.githubusercontent.com/z3zens/Kernel-CI/main/clone.sh)"
+      
+  Build-Kernel_script:
+      - bash -c "$(curl -sL https://raw.githubusercontent.com/z3zens/Kernel-CI/main/build.sh)"
+      
+  Upload-Kernel_script:
+      - bash -c "$(curl -sL https://raw.githubusercontent.com/z3zens/Kernel-CI/main/upload.sh)"
+   
