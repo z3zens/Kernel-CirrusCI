@@ -25,8 +25,8 @@ clone() {
 	# Clone Clang
 	git clone --depth=1 https://gitlab.com/RyuujiX/neutron-clang -b Neutron-16 clang
     
-    # Clone Kernel
-    git clone --depth=1 https://github.com/nerdprojectorg/android_kernel_asus_sdm660 -b tm kernel
+        # Clone Kernel
+        git clone --depth=1 https://github.com/nerdprojectorg/android_kernel_asus_sdm660 -b tm kernel
 }
 
 clone
