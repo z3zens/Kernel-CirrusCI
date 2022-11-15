@@ -6,8 +6,9 @@
 # Based on Panchajanya1999 script.
 #
 
-mv "$KERNEL_DIR"/out/arch/arm64/boot/Image.gz-dtb AnyKernel3/Image.gz-dtb
-cd AnyKernel3 || exit
+AnyKernel3=$PWD/AnyKernel3
+mv "$KERNEL_DIR"/out/arch/arm64/boot/Image.gz-dtb $AnyKernel3/Image.gz-dtb
+cd $AnyKernel3 || exit
 zip -r9 "$ZIPNAME" * -x .git README.md
 
 # Prepare a final zip variable
