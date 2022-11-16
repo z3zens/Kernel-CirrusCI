@@ -131,5 +131,19 @@ build_kernel() {
 	fi
 }
 
+# Set function for zipping into a flashable zip
+gen_zip() {
+	mv "$KERNEL_DIR"/out/arch/arm64/boot/Image.gz-dtb AnyKernel3/Image.gz-dtb
+	cd AnyKernel3 || exit
+	zip -r9 "$ZIPNAME" * -x .git README.md
+
+	# Prepare a final zip variable
+	ZIP_FINAL="$ZIPNAME"
+
+	tg_post_build "$ZIP_FINAL" "$CHATID" "Build took : $((DIFF / 60)) minute(s) and $((DIFF % 60)) second(s)"
+	cd ..
+}
+
 setversioning
 build_kernel
+gen_zip
