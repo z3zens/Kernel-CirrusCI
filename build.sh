@@ -23,8 +23,8 @@ cd $KERNEL_DIR
 # Set enviroment for naming kernel
 MODEL="Zenfone Max Pro M2"
 DEVICE="X01BD"
-KERNEL="Zephyrus"
-CAFTAG="LA.UM.11.2.1.r1-02100"
+KERNEL="perf"
+CAFTAG="LA.UM.11.2.1.r1-02100-sdm660.0"
 
 # Get defconfig file
 DEFCONFIG=asus/X01BD_defconfig
@@ -105,7 +105,7 @@ setversioning() {
 build_kernel() {
 	echo -e "Kernel compilation starting"
 
-	tg_post_msg "<b>Device : </b><code>$MODEL [$DEVICE]</code>%0A<b>Branch : </b><code>$BRANCH</code>%0A<b>Kernel Version : </b><code>$KERVER</code>%0A<b>CLO Version : </b><code>$CAFTAG</code>%0A<b>Date : </b><code>$(TZ=Asia/Jakarta date)</code>%0A<b>Compiler Used : </b><code>$KBUILD_COMPILER_STRING</code>%0a<b>Last Commit : </b><code>$COMMIT_HEAD</code>%0A" "$CHATID"
+	tg_post_msg "<b>Device : </b><code>$MODEL [$DEVICE]</code>%0A<b>Branch : </b><code>$BRANCH</code>%0A<b>Kernel : </b><code>$KERVER</code>%0A<b>CLO : </b><code>$CAFTAG</code>%0A<b>Date : </b><code>$(TZ=Asia/Jakarta date)</code>%0A<b>Compiler : </b><code>$KBUILD_COMPILER_STRING</code>%0a<b>Last Commit : </b><code>$COMMIT_HEAD</code>%0A" "$CHATID"
 
 	make O=out $DEFCONFIG
 
