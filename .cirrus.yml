@@ -21,7 +21,3 @@ task:
       
   Build-Kernel_script:
       - bash -c "$(curl -sL https://raw.githubusercontent.com/z3zens/Kernel-CirrusCI/main/build.sh)"
-      
-  Upload-Kernel_script:
-      - bash -c "$(curl -sL https://raw.githubusercontent.com/z3zens/Kernel-CirrusCI/main/upload.sh)"
-   
