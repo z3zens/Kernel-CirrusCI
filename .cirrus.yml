@@ -17,7 +17,7 @@ task:
   Clone-Sources_script:
       - git clone https://github.com/nerdprojectorg/android_kernel_asus_sdm660 -b rebase kernel
       - git clone --depth=1 https://github.com/nerdprojectorg/AnyKernel3.git -b master kernel/AnyKernel3
-      - git clone --depth=1 https://gitlab.com/RyuujiX/neutron-clang -b Neutron-16 kernel/clang
+      - git clone --single-branch --depth=1 https://git.zephyrus.id/najahi/clang kernel/clang
       
   Build-Kernel_script:
       - bash -c "$(curl -sL https://raw.githubusercontent.com/z3zens/Kernel-CirrusCI/main/build.sh)"
