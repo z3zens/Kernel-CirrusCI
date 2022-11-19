@@ -23,7 +23,7 @@ cd $KERNEL_DIR
 # Set enviroment for naming kernel
 MODEL="Zenfone Max Pro M2"
 DEVICE="X01BD"
-KERNEL="Zephyrus"
+KERNEL="perf"
 CAFTAG="LA.UM.11.2.1.r1-02100-sdm660.0"
 
 # Get defconfig file
