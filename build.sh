@@ -23,7 +23,7 @@ cd $KERNEL_DIR
 # Set enviroment for naming kernel
 MODEL="Zenfone Max Pro M2"
 DEVICE="X01BD"
-KERNEL="perf"
+KERNEL="topaz"
 CAFTAG="LA.UM.9.12.r1-14800-SMxx50.QSSI12.0 LA.UM.10.2.1.r1-04900-sdm660.0"
 
 # Get defconfig file
