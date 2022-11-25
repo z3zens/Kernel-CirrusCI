@@ -20,10 +20,6 @@ err() {
 KERNEL_DIR=$PWD/kernel
 cd $KERNEL_DIR
 
-# Reset commit
-git revert d973c06223829cb6e3e1b7a230fc9390aa545a0d 50ec919a2457344a21cc81e0a4c5046da0af3912 ea0d78b6df31f60f8e734b3fb1107a0e80c7910a -n
-git commit -m "tet"
-
 # Set enviroment for naming kernel
 MODEL="Zenfone Max Pro M2"
 DEVICE="X01BD"
