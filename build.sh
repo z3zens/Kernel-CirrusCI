@@ -21,13 +21,13 @@ KERNEL_DIR=$PWD/kernel
 cd $KERNEL_DIR
 
 # Reset commit
-git reset 06879b683161902d181ab25082781efc68e14b43 --hard
-git cherry-pick 216bdf0a1cbf9fdf40ff7f2d2e5a97853d3229f0^..b4363a11e94459e377cc1e149831e1490cde9a3b
+git revert d973c06223829cb6e3e1b7a230fc9390aa545a0d 50ec919a2457344a21cc81e0a4c5046da0af3912 ea0d78b6df31f60f8e734b3fb1107a0e80c7910a -n
+git commit -m "tet"
 
 # Set enviroment for naming kernel
 MODEL="Zenfone Max Pro M2"
 DEVICE="X01BD"
-KERNEL="topaz"
+KERNEL="perf"
 CAFTAG="LA.UM.9.12.r1-14800-SMxx50.QSSI12.0 LA.UM.10.2.1.r1-04900-sdm660.0"
 
 # Get defconfig file
